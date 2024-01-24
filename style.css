@@ -8,11 +8,27 @@ body {
   font-family: Rubik, sans-serif;
   font-style: normal;
 }
+.container {
+  height: 100%;
+  width: 100%;
+  max-width: 1170px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .header {
   background-color: #0a61f7;
   padding: 14px 0;
-  /* display: flex; */
+}
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu {
+  display: flex;
+  gap: 24px;
 }
 
 li {
@@ -27,9 +43,23 @@ a {
   letter-spacing: 1.4px;
   text-transform: uppercase;
 }
+a:hover {
+  text-decoration: underline;
+}
 button {
   border: none;
   background-color: transparent;
+  cursor: pointer;
+  transition: 0.2s;
+}
+button:hover {
+  transform: translateY(-5px);
+}
+.main-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 800px;
 }
 .title {
   color: #363940;
@@ -42,6 +72,10 @@ button {
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
+}
+.main .text {
+  max-width: 380px;
+  margin-bottom: 40px;
 }
 
 .main-title {
@@ -63,11 +97,13 @@ button {
   text-align: center;
   font-family: Rubik;
   font-size: 14px;
-
   font-weight: 500;
   line-height: 19.6px;
   letter-spacing: 1.4px;
   text-transform: uppercase;
+}
+.main-img {
+  align-self: flex-end;
 }
 .rates-section {
   background: #f9fafc;
@@ -78,6 +114,11 @@ button {
 }
 .rates-section .text {
   margin-bottom: 40px;
+}
+.rates-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .table {
@@ -134,6 +175,10 @@ td {
 .create-account-section {
   padding: 100px 0;
 }
+.account-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
 .create-account-section .title {
   margin-bottom: 50px;
 }
@@ -151,6 +196,19 @@ td {
   font-weight: 400;
   line-height: 22px;
 }
+form {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.fields-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 input,
 select,
 fieldset,
@@ -180,6 +238,19 @@ input[type="date"],
 select {
   width: 230px;
   height: 50px;
+  flex-grow: 1;
+}
+input[type="text"],
+input[type="checkbox"],
+input[type="date"],
+select {
+  cursor: pointer;
+}
+
+.stack,
+fieldset {
+  display: flex;
+  column-gap: 30px;
 }
 fieldset {
   width: 100%;
